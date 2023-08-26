@@ -50,7 +50,7 @@ shinyAppUI <- function() {
         tabName = "input",
         fixedRow(column(12,
           h2("Manage Files"), br(),
-          div("Here you can import rawfiles, assign custom titles and drag&drop to sort the list."), br(),
+          div("Here you can import rawfiles, assign custom titles and drag&drop to sort the list. The UI can be quite unresponsive during rawfile import."), br(),
           div("Note: There is currently no error handling so importing broken / incomplete rawfiles will crash the app."), br(),
           shinyFilesButton(id = ns_processing("rawfiles_new"), label = "Select Raw File(s)", title = "Select Raw File(s)", multiple = TRUE), br(),
         )),
