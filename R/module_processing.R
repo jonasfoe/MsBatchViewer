@@ -9,11 +9,11 @@ processingServer <- function(id, rawfiles, tasks, rawfile_rm_handlers, future, c
     rm_by_nm <- function(x, nm) x[names(x) != nm]
 
     # general
-    default_root <- "."
-    filesys_roots <- function() c("." = ".", getVolumes()())
+    default_root <- "example"
+    filesys_roots <- function() c("example" = system.file("extdata", package = "MsRawAccess"), getVolumes()())
     # # my local laptop
     # default_root <- "examples"
-    # filesys_roots <- function() c("." = ".", "data" = "../../../data", "examples" = "C:/Users/foerstjo/Documents/riemergrp/tools_own/example_rawfiles", getVolumes()())
+    # filesys_roots <- function() c("." = ".", "data" = "../../../data", "example" = system.file("extdata", package = "MsRawAccess"), "examples" = "C:/Users/foerstjo/Documents/riemergrp/tools_own/example_rawfiles", getVolumes()())
     # # the workstations
     # default_root <- "data"
     # filesys_roots <- function() c("data" = "E:/OE Raw data", getVolumes()())
