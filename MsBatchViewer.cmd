@@ -1,6 +1,7 @@
 @echo off
 setlocal
 
+echo Starting MsBatchViewer
 "Rscript.exe" -e "pkgload::load_all('.'); runApp(MsBatchViewer(), launch.browser = TRUE)" || goto stop
 
 echo.
