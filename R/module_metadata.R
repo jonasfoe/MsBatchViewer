@@ -39,7 +39,7 @@ metadataServer <- function(id, rawfiles, tasks, rawfile_rm_handlers, sidebar, fu
         tasks$future_active <- tasks$future_active + 1L
 
         filepath <- rawfiles$filepaths[rawfile_uuid]
-        f <- future(extract_metadata(filepath), globals = c("extract_metadata", "filepath", "a"), seed = TRUE)
+        f <- future(extract_metadata(filepath), globals = c("extract_metadata", "filepath"), seed = TRUE)
 
         self <- observe(priority = 9, {
           if (resolved(f)) {
