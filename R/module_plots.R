@@ -129,7 +129,7 @@ plotsServer <- function(id, rawfiles, tasks, rawfile_rm_handlers, sidebar, futur
           ggpp::annotate("text_npc", label = label, npcx = 1, npcy = 1, vjust = 1, hjust = 1)
       }
 
-      p$digest <- digest::digest(p)
+      p$digest <- digest::digest(list(ticdata, integraldata, max_charge, invert_stacking, annotate_charge_ranges))
       p
     }
 
@@ -322,7 +322,7 @@ plotsServer <- function(id, rawfiles, tasks, rawfile_rm_handlers, sidebar, futur
                     coord_cartesian(xlim = p_rt_range, ylim = c(0, p_tic_max)) +
                     theme(legend.key.height = unit(4, "lines"))
                 },
-                { digest::digest(c(p$digest, p_tic_max, p_rt_range)) },
+                { digest::digest(list(p$digest, p_tic_max, p_rt_range)) },
                 sizePolicy = sizeGrowthRatio(width = 300, height = 400, growthRate = 1.2),
                 outputArgs = list(height = 400)
               )
