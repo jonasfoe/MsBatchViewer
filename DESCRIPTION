@@ -1,7 +1,7 @@
 Package: MsBatchViewer
 Type: Package
 Title: Shiny tool for charge state resolved total ion current chromatograms
-Version: 1.0.1
+Version: 1.1.0
 Authors@R: person("Jonas D.", "Förster", email = "jonasfoerster@gmail.com", role = c("aut", "cre"))
 Description: Shiny tool for charge state resolved total ion current chromatograms
 License: Attribution 4.0 International (CC BY 4.0) | file LICENSE
