@@ -1,6 +1,6 @@
 
 shinyAppServer <- function(input, output, session) {
-  cl_count <- availableCores()
+  cl_count <- max(1L, availableCores() - 1L)
   future <- tweak(multisession, workers = cl_count)
 
   rawfiles <- reactiveValues(
